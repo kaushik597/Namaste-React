@@ -1,41 +1,79 @@
-1.What is Emmet?
-Ans: Emmet is a toolkit or plugin for writing html/ css. We can write a large amount of code in few seconds using emmet syntax. It helps in saving the time of a developer.
-Eg: 
-I will write a sample html code and write how can I use emmet to produce it.
-<div>
-<ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-</ul>
-</div> 
-We can generate the above code using emmet as below:
-div>ul>li*5
+1. What is npm?
+npm is used to install packages.
+There is no full form for npm, initially people used to tell it as node package manager but it is not. It is a place where all the packages are hosted. Almost all the packages we need to develope an application are hosted on npm. We can get that package by simply writing the command npm install <packageName>
 
-2.Difference between a library and a framework?
-Ans: Library:
-These are written to solve common problems of developers. These can be used any time and any no of times. It is simply like for eg: we want to do some addition and instead of writing a sum function and call it we can simply get that function from a library if it already defined in it. It is like we can use the functions of it is already written. Libraries contains most of the reusable functions where the developers can use them instead of again writing them from scratch.
+2. What is parcel/webpack ? why do we need it?
+Parcel is a zero configuration bundler
+Parcel/webpack is a bundler. A bundler is a tool which bundles all our code and reduces its size so that it can be deployed on production. Parcel does many things which are used to build a production ready app. Some of its features are
+.Dev build
+.Local server
+.HMR Hot Module Replacement
+.File watching algorithm
+.caching
+.Image optimization
+.minification
+.Bundling
+.compress
+.Tree shaking
+.content hashing
+code splitting
+.Differential building
+.Supports your app on older browsers
+.Diagnostic
+.Error handling
+.Https
 
-Framework:
-Framework is  a set of rules and components that helps in building an application.
+3. What is .parcel-cache?
+It is a folder created when we execute parcel command i.e, npx parcel <filename>
+This folder contains all the information of our project so that when we execute the command next time it executes in lesser time compared to the previous execution time,because it fetches the data from this folder instead of executing it again. When something is changed it gets updated in this.
 
-3. What is CDN? Why do we use it?
-Ans: CDN is a Content Delivery Network. It is a distributed system where the server functionalities is distributed to various end points. Users can access this endpoint instead of accessing the server directly. This helps in reducing the time taken to fetch and send requests also as the users are connecting with the end points instead of  the server directly the server wont be busy or it will not have high loads on it. We use CDN links to get the libraries and embed all those features in our project so that we can get access to all the functionalities and features of that server.
-4. why is react known as react?
-Ans: The idea behind react is to update only the part of dom which ever is needed. React is designed in such a way that whatever should be updated that part will be only be updated not the entire part. As it reacts to whatever is required and reacts on data manipulation on ui it got the name react.
+4. what is npx?
+npx is used to execute the packages that are installed already.
+eg: npx parcel index.html
+here parcel is the package we have installed so we are executing it.
 
-5.What is cross-origin in script tag?
-Ans: cross-origin is an attribute in script tag which tells browser how to handle resources from cross-origin. Browser may block several resources from various servers but by using cross-origin we can specify that these resources are safe to use and are coming from the server only.
+5. What is the difference between dependencies and devDependencies?
+dependencies are for production where as devDependencies are for development phase. There are more things to try in development phase hence we use devDependencies where as in production our application should be stable hence we use dependencies over there. devDependencies will get updates frequently where as dependencies donot.
 
-6. What is the difference between react and react dom?
-Ans: React is a javascript library used to create user interfaces. It uses reusable components to create ui. Where as React DOM is used to render updated html on the ui. It is used for dom updation.
+6. what is treeshaking?
+It is a feature of parcel where it analyses all the imports and exports of each module and removes everything that is not used.
 
-7. what is the difference between react.development.js and react.production.js via cdn?
-Ans: react.development.js is the development version of react library where as react.production.js is the production version which is optimized for performance compared to development version. Development version has warnings and debug information where as in production version it is removed.
+7. what is hot module replacement?
+It is a feature of parcel where parcel updates your changes instantly on the dev server after saving your code. For example if we have changed some text and saved it parcel updates it on the ui without reloading.
 
-8.what are async and defer?
-Ans: async and defer are the attributes of a script tag to load external scripts efficiently into our web page. When we use async in  the script tag scripts are fetched parallely while html parsing is going on once the scripts are fetched it starts executing then and there and then it completes the html parsing. When we use defer scripts are fetched parallelly with html parsing but the execution is done only after html parsing. When we use async there is no guarantee that the scripts are executed in order. This is a problem if the scripts are dependent on other. Hence using defer would be a better option in such scenario.
+8. list down your favourite 5 superpowers of parcel and describe any 3 of them in your own words>
+.Dev build
+.Local server
+.HMR Hot Module Replacement
+.File watching algorithm
+.caching
+
+local server:
+it creates a local server when we execute the command hence we can open that link everytime when the app is still running
+hmr:
+it updates on the ui instantly without reloading the page.
+caching:
+our app executes very faster because it fetches code from .parcel-cache folder
+
+9. what is .gitignore? what should we add and not add  into it?
+.gitignore is a file where we add all the folders which should be ignored by git.
+we should add all the files which are used for our app.
+we should not include folders like node modules , dist .. because those can be installed by simply running some commands.
+
+10. what is the difference between package.json and package-lock.json ?
+package.json is a configuration for npm. It will have all the dependencies our project needs. package.json does not have exact version because a package gets updated whenever there is minor or major update.
+package-lock.json will have the exact version of the package that is installed.
+
+11. why should i not modify package-lock.json?
+we should not modify package-lock.json because it keeps track of exact version of the package that is being installed.
+
+12. what is node modules? is it a good idea to push it on git?
+node modules is a folder which contains all the dependencies mentioned in the package.json. It is not a good idea to push it on git because those can be easily generated again and the size of node modules are also very large.
+
+13. what is dist folder?
+dist folder contains the bundle of our project. It has all the files with minified version. Simply it contains the dev build / production build 
+
+14. what is browserlist?
+It is used to support our app in older versions of the browser.
 
 
