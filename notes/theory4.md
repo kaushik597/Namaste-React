@@ -14,13 +14,13 @@ Ans: /**/
 Ans: They are higher order components. React renders only one component so when you have multiple dom elements those are wrapped inside React.Fragment or empty tags.
 
 ## 6.what is virtual DOM?
-Ans: Virtual DOM is a programming concept where an ideal or virtual representaion of a UI is kept in memory and synced with REAL DOM by a library called ReactDOM. This process is called reconciliation.
+Ans: Virtual DOM is a representation of Actual DOM. It is nothing but a normal js object. The JSx we write inside the react component is converted into js object. whatever elements we have in the dom will be in the virtual dom as well but in the form of object
 
 ## 7.What is Reconciliation in React?
 Ans: Reconciliation is a process in which react updates the browser DOM. When we make some changes in the UI, React creates a new virtual DOM and compares it the original DOM and it updates only that part where it sees the change not the entire DOM.
 
 ## 8.What is react fiber?
-Ans: React Fiber is a concept of reactjs that is used to render a system faster or smoother.Introduced from React 16, Fiber Reconciler is the new reconciliation algorithm in React. The term Fiber refers to React's data structure (or) architecture, and originates from 'fiber' - a representation of a node of the DOM tree.
+Ans: React Fiber is a concept of reactjs that is used to render a system faster or smoother.Introduced from React 16, Fiber Reconciler is the new reconciliation algorithm in React. The term Fiber refers to React's data structure (or) architecture, and originates from 'fiber' - a representation of a node of the DOM tree. 
 
 
 ## 9. Why we need keys in React?When do we need keys in React?
