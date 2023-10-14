@@ -12,7 +12,6 @@ const Header =()=>{
                 <img className="logo" src={LOGO_URL}></img>
             </div>
             <div className="nav-items">
-                {console.log('***',useState(1))}
                 <ul>
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/about">About us</Link></li>
