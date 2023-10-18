@@ -4,7 +4,7 @@ import {Link} from "react-router-dom"
 const Header =()=>{
     const [loginBtn,setLoginBtn]=useState("Login")
     useEffect(()=>{
-        console.log('use effect called here');
+        console.log('use effect called');
     },[])
     return (
         <div className="header">
@@ -17,9 +17,10 @@ const Header =()=>{
                     <li><Link to="/about">About us</Link></li>
                     <li><Link to="/contact">Contact us</Link></li>
                     <li>Cart</li>
-                    <button className="login-button" onClick={()=>{
+                    {/* <button className="login-button" onClick={()=>{
                         loginBtn==="login"?setLoginBtn("logout"):setLoginBtn("login")
-                    }}>{loginBtn}</button>
+                    }}>{loginBtn}</button> */}
+                    <li><Link to="/signup">Signup</Link></li>
 
                 </ul>
 
