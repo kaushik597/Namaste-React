@@ -7,8 +7,13 @@ class User extends React.Component {
             count:0,
             count1:1
         }
+        console.log("child constructor");
+    }
+    componentDidMount(){
+        console.log("child component did mount");
     }
     render(){
+        console.log("child render");
         return (
             <div className="user-card">
                 <h1>Count:{this.state.count}</h1>
