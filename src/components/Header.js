@@ -9,13 +9,13 @@ const Header =()=>{
     },[])
     const status = useOnlineStatus()
     return (
-        <div className="header">
-            <div className="logo-container">
-                <img className="logo" src={LOGO_URL}></img>
+        <div className="flex justify-between items-center bg-red-300 ">
+            <div >
+                <img className="w-10" src={LOGO_URL}></img>
             </div>
-            <div className="nav-items">
-                <ul>
-                    <li>Status:{(status==true)?" Online 🟢": " Offline 🔴"
+            <div >
+                <ul className="flex space-x-4 px-4 ">
+                    <li className="">Status:{(status==true)?" Online 🟢": " Offline 🔴"
 } </li>
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/about">About us</Link></li>
