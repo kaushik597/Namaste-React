@@ -1,5 +1,5 @@
 # 1 Explore all the ways of writing css?
-Ans There are various ways of writing css. Some of them are Sass, scss, styled components, material UI, bootstrap, ant design, chakra UI  and Tailwind CSS.
+Ans There are various ways of writing css. They are inline, internal, external.
 
 # 2 How do we configure tailwind?
 Ans Tailwind documentation provides us the detailed steps of configuring tailwind css. We are using parcel so the steps are

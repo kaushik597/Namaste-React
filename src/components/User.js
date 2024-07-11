@@ -9,13 +9,10 @@ class User extends React.Component {
                 location:""
             }
         }
-        console.log(this.props.name+"child constructor");
     }
     async componentDidMount(){
-        console.log(this.props.name+"child component did mount");
         const response = await fetch("https://api.github.com/users/kaushik597")
         const data = await response.json();
-        console.log(data);
         this.setState({
             userInfo:data
         })
@@ -29,7 +26,6 @@ class User extends React.Component {
         console.log("component will unmount")
     }
     render(){
-        console.log(this.props.name+"child render");
         const {name,location,avatar_url} = this.state.userInfo
 
         return (
