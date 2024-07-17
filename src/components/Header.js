@@ -3,6 +3,7 @@ import { useState,useEffect, useContext } from "react"
 import {Link} from "react-router-dom"
 import useOnlineStatus from "../utils/useOnlineStatus"
 import UserContext from "../utils/UserContext"
+import { useSelector } from "react-redux"
 const Header =()=>{
     const [loginBtn,setLoginBtn]=useState("Login")
     const user =useContext(UserContext)
@@ -11,6 +12,8 @@ const Header =()=>{
         console.log('use effect called');
     },[])
     const status = useOnlineStatus()
+    const cartItems = useSelector(store=>{return store.cart.items})
+    console.log(cartItems);
     return (
         <div className="flex justify-between items-center bg-red-300 ">
             <div >
@@ -24,7 +27,7 @@ const Header =()=>{
                     <li><Link to="/about">About us</Link></li>
                     <li><Link to="/contact">Contact us</Link></li>
                     <li><Link to="/grocery">Grocery</Link></li>
-                    <li>Cart</li>
+                    <li className="font-bold"><Link to="/cart">Cart</Link>({cartItems.length}items)</li>
                     <li><Link to="/signup">Signup</Link></li>
                     <li className="font-bold">{user.username}</li>
 

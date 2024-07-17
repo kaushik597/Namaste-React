@@ -1,6 +1,15 @@
+import { useDispatch } from "react-redux";
 import { IMAGES_URL } from "../utils/constants";
+import { addItem } from "../utils/cartSlice";
 
 const Itemlist = (list, dummy) => {
+  console.log("list item list", list);
+  const dispatch = useDispatch()
+  const handleAdd=(item)=>{
+    console.log("handleClick clicked");
+    dispatch(addItem(item));
+
+  };
   return (
     <div className="flex flex-col">
       {list.list.map((item) => (
@@ -19,7 +28,7 @@ const Itemlist = (list, dummy) => {
             {/* <p>{item.card.info.description}</p> */}
           </div>
           <div>
-          <p className="text-green-800 bg-white rounded-lg font-bold p-3 mx-10 my-20 absolute cursor-pointer ">ADD</p>
+          <button className="text-green-800 bg-white rounded-lg font-bold p-3 mx-10 my-20 absolute cursor-pointer " onClick={()=>handleAdd(item)}>ADD</button>
 
             <img
               className="w-[150px] cursor-pointer"
