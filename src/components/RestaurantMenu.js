@@ -15,6 +15,7 @@ const RestaurantMenu = () => {
   return initialData == null ? (
     <Shimmer />
   ) : (
+    
     initialData.map((category,index) => <RestaurantCategory
      key={category.card.card.title}  
      data={category} 

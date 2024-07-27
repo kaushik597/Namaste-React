@@ -13,7 +13,7 @@ const Itemlist = (list, dummy) => {
   return (
     <div className="flex flex-col">
       {list.list.map((item) => (
-        <div className="border-b-2 border-b-slate-200 flex justify-between m-5 p-4 ">
+        <div className="border-b-2 border-b-slate-200 flex justify-between m-5 p-4 " data-testid="items">
           <div className="">
             <p className="font-bold">{item.card.info.name}</p>
             <p className="font-bold">

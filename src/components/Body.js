@@ -57,6 +57,7 @@ const Body = () => {
         <div className="">
           <button
             className="bg-gray-300 p-4 m-4 rounded-lg"
+            data-testid="topRated"
             onClick={() => {
               let result = filteredRestaurantsList.filter(
                 (restaurant) => restaurant.info.avgRating >= 4.2
@@ -71,6 +72,7 @@ const Body = () => {
         <div className="search-container">
           <input
             type="text"
+            data-testid="searchInput"
             placeholder="search for restaurants"
             className="p-4 "
             value={searchText}
@@ -95,17 +97,19 @@ const Body = () => {
         </div>
       </div>
 
-      <div className="flex flex-wrap">
+      <div  className="flex flex-wrap">
         {filteredRestaurantsList.map((restaurant) => (
           <Link
             key={restaurant.info["id"]}
             to={"restaurants/" + restaurant.info["id"]}
           >
+            <div data-testid="resCard">
             {restaurant.info["isOpen"] ? (
               <PromotedRestaurantCard respData={restaurant.info} />
             ) : (
-              <RestaurantCard respData={restaurant.info} />
+              <RestaurantCard  respData={restaurant.info} />
             )}
+            </div>
           </Link>
         ))}
       </div>

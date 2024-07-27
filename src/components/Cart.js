@@ -13,7 +13,7 @@ return (
         <h1 className="">Cart</h1>
         <div className="w-6/12 m-auto">
         {cartData.length!=0 ? <>
-            <Itemlist list={cartData} />
+            <Itemlist list={cartData} /> 
         <button className="m-2 p-2 border border-black rounded-md bg-red-700 text-white " onClick={handleClear}>Clear cart</button>
 
         </>:<h1 className="text-red">Please order something and come here 😋</h1>}

@@ -3,7 +3,8 @@ import * as test from "../utils/constants";
 import UserContext from "../utils/UserContext";
 const RestaurantCard=(props)=>{
     const user = useContext(UserContext)
-    console.log("user in restaurant card", user);
+    // console.log("user in restaurant card", user);
+    // console.log(props,"");
     const {cloudinaryImageId,name,avgRating,cuisines}=props?.respData
     return (
         // <div className="">
@@ -23,7 +24,7 @@ export const setPromotedRestaurantCard =(RestaurantCard)=>{
     return (props)=>{
         return (
             <div>
-                <p className="absolute bg-black text-white m-2 p-2 rounded-lg">Bammardi</p>
+                <p className="absolute bg-black text-white m-2 p-2 rounded-lg">Open</p>
                 <RestaurantCard {...props} />
             </div>
         )

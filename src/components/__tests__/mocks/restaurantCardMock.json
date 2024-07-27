@@ -1,0 +1,62 @@
+{
+    "id": "739118",
+    "name": "Seoul Mate Korean Burgers",
+    "cloudinaryImageId": "d6a8cb3cae80e0a496e2d7fdbbbc1adb",
+    "locality": "Industrial Layout ward",
+    "areaName": "Kormangla",
+    "costForTwo": "₹200 for two",
+    "cuisines": [
+        "Burgers",
+        "Bubble Tea",
+        "Beverages",
+        "Fast Food",
+        "Street Food"
+    ],
+    "avgRating": 4.3,
+    "parentId": "372969",
+    "avgRatingString": "4.3",
+    "totalRatingsString": "500+",
+    "sla": {
+        "deliveryTime": 27,
+        "lastMileTravel": 1.4,
+        "serviceability": "SERVICEABLE",
+        "slaString": "25-30 mins",
+        "lastMileTravelString": "1.4 km",
+        "iconType": "ICON_TYPE_EMPTY"
+    },
+    "availability": {
+        "nextCloseTime": "2024-07-26 05:00:00",
+        "opened": true
+    },
+    "badges": {},
+    "isOpen": true,
+    "type": "F",
+    "badgesV2": {
+        "entityBadges": {
+            "imageBased": {},
+            "textBased": {},
+            "textExtendedBadges": {}
+        }
+    },
+    "aggregatedDiscountInfoV3": {
+        "header": "50% OFF",
+        "subHeader": "UPTO ₹100"
+    },
+    "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+            "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+            "lottie": {},
+            "video": {}
+        }
+    },
+    "reviewsSummary": {},
+    "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+    "restaurantOfferPresentationInfo": {},
+    "externalRatings": {
+        "aggregatedRating": {
+            "rating": "--"
+        }
+    },
+    "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+}

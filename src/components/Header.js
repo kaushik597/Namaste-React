@@ -27,7 +27,7 @@ const Header =()=>{
                     <li><Link to="/about">About us</Link></li>
                     <li><Link to="/contact">Contact us</Link></li>
                     <li><Link to="/grocery">Grocery</Link></li>
-                    <li className="font-bold"><Link to="/cart">Cart</Link>({cartItems.length}items)</li>
+                    <li className="font-bold"><Link to="/cart">Cart ({cartItems.length} items)</Link></li>
                     <li><Link to="/signup">Signup</Link></li>
                     <li className="font-bold">{user.username}</li>
 
